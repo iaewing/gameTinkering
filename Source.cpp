@@ -1,3 +1,6 @@
+/*
+File: Game Tinkering*/
+
 #include <stdio.h>
 #include <stdlib.h> //rand and srand
 #include <time.h> //time
