@@ -34,26 +34,23 @@ int main(void)
 
 		direction = getNum();
 
-		if (direction == 1)
+		switch (direction)
 		{
+		case 1:
 			printf("You approach the ruined building.\n");
 			printf("As you draw nearer to the door, you realize that this was once a small home.\n");
 			printf("You open the door and enter the darkened room.\n");
 			combat(playerStats, enemyStats);
-		}
-		else if (direction == 2)
-		{
+			break;
+		case 2:
 			printf("You head to the east. As you begin to climb the hill\n");
 			printf("you begin to realize it is much steeper than it looked.\n");
 			printf("A loose rock under your right foot falls, sending you tumbling backward.\n");
 			playerStats[0] = 0;
-		}
-		else if (direction == 3)
-		{
-			
-		}
-		else if (direction == 4)
-		{
+			break;
+		case 3:
+			break;
+		case 4:
 			printf("You head to the west. As you begin to climb the hill\n");
 			printf("you realize the hill is much steeper than you anticipated.\n");
 			printf("You struggle up the hill, fighting for every foothold.\n");
@@ -61,11 +58,12 @@ int main(void)
 			printf("the screech of a passing falcon. You lose your grip of the rock\n");
 			printf("and go tumbling backward.\n");
 			playerStats[0] = 0;
-		}
-		else
-		{
-			printf("Please enter a number.\n");
-		}
+			break;
+
+		default:
+			printf("please enter a number between 1 and 4\n");			
+			break;
+		} 
 		/*
 		for (int i = 0; i < 3; i++)
 		{
